@@ -17,18 +17,18 @@ char *cap_string(char *str)
 	{
 		if (a == 0 && str[a] >= 97 && str[a] <= 122)
 		{
-			str[a] = str[a] - 31;
-		}
-		b = 0;
-		while (c[b] != '\0')
-		{
-			if (c[b] == str[a] && (str[a + 1] >= 97 && str[a + 1] <= 122))
-			{
-				str[a + 1] = str[a + 1] - 32;
-			}
-			b++;
-		}
-		a++;
+			str[a] = str[a] - 32;
+	}
+	b = 0;
+	while (c[b] != '\0')
+	{
+	if (c[b] == str[a] && (str[a + 1] >= 97 && str[a + 1] <= 122))
+	{
+	str[a + 1] = str[a + 1] - 32;
+	}
+	b++;
+	}
+	a++;
 	}
 	return (str);
 }
