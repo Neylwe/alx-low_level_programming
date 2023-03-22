@@ -21,11 +21,12 @@ int (*get_op_func(char *s))(int, int)
 
 	int a  = 0;
 
-	while (ops[a].op) /* while ops[a] contains a valid character */
+	while (ops[a].op != NULL)
 	{
-		if (*ops[a].op == *s && s[1] == '\0') /* user input */
+		if (*s == *(ops[a].op) && s[1] == '\0')
 			return (ops[a].f);
-		a++;
+				a++;
 	}
-	return (NULL);
+	printf("Error\n");
+	exit(99);
 }
