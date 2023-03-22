@@ -19,7 +19,7 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 
-	int a  = 0;
+	int a = 0;
 
 	while (ops[a].op != NULL)
 	{
